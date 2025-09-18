@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFF7ED"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g transform="translate(120,140)" fill="#111827">
+    <text font-family="Poppins, Arial, sans-serif" font-size="68" font-weight="700">Contact</text>
+    <text y="80" font-family="Inter, Arial, sans-serif" font-size="30" fill="#334155">Book a tasting or catering in Houston</text>
+  </g>
+  <rect x="120" y="420" width="180" height="16" rx="8" fill="#10B981"/>
+</svg>
