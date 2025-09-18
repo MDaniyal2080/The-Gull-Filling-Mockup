@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return recipes.map((r) => ({ slug: r.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const recipe = recipes.find((r) => r.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const recipe = recipes.find((r) => r.slug === slug);
   if (!recipe) return {};
   return {
     title: `${recipe.title} — The Gut Filling`,
@@ -20,8 +21,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function RecipeDetail({ params }: { params: { slug: string } }) {
-  const recipe = recipes.find((r) => r.slug === params.slug);
+export default async function RecipeDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const recipe = recipes.find((r) => r.slug === slug);
   if (!recipe) return notFound();
 
   return (

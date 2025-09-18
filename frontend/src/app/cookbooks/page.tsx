@@ -27,7 +27,7 @@ export default function CookbooksPage() {
         <p className="section-sub">Beautifully photographed collections with bright, balanced flavors and approachable techniques.</p>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
           {cookbooks.map((b) => (
-            <BookCard key={b.year} book={b as any} />
+            <BookCard key={b.year} book={b} />
           ))}
         </div>
       </Container>

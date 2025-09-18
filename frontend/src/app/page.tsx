@@ -67,7 +67,7 @@ export default function Home() {
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
             {cookbooks.map((b, i) => (
               <Reveal key={b.year} delay={(i % 3) as 0 | 100 | 200}>
-                <BookCard book={b as any} />
+                <BookCard book={b} />
               </Reveal>
             ))}
           </div>

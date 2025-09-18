@@ -6,6 +6,13 @@ export type Recipe = {
   tags?: string[];
 };
 
+export type Cookbook = {
+  year: number;
+  title: string;
+  cover: string;
+  description: string;
+};
+
 // Curated imagery (local)
 export const heroImage = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop";
 export const heroBgImage = "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2000&auto=format&fit=crop";
@@ -41,7 +48,7 @@ export const services = [
   { title: "Private Classes", desc: "Hands-on sessions for teams and home cooks.", icon: "👩‍🍳" },
 ];
 
-export const cookbooks = [
+export const cookbooks: Cookbook[] = [
   {
     year: 2025,
     title: "The Gut Filling: 2025 Cookbook",

@@ -2,15 +2,9 @@
 
 import { motion } from "framer-motion";
 import SmartImage from "@/components/SmartImage";
+import type { Cookbook } from "@/lib/sampleData";
 
-type Book = {
-  year: number;
-  title: string;
-  cover: string;
-  description: string;
-};
-
-export default function BookCard({ book }: { book: Book }) {
+export default function BookCard({ book }: { book: Cookbook }) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 18 }}
