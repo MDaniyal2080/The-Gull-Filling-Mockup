@@ -15,7 +15,9 @@ const body = Inter({
   variable: "--font-body",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined);
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
 
 export const metadata: Metadata = {
